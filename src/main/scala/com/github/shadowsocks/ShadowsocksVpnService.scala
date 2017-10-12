@@ -474,7 +474,7 @@ class ShadowsocksVpnService extends VpnService with BaseService {
     var cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/tun2socks",
       "--netif-ipaddr", PRIVATE_VLAN.formatLocal(Locale.ENGLISH, "2"),
       "--netif-netmask", "255.255.255.0",
-      "--socks-server-addr", "127.0.0.1:" + profile.localPort,
+      "--socks-server-addr", "0.0.0.0:" + profile.localPort,
       "--tunfd", fd.toString,
       "--tunmtu", VPN_MTU.toString,
       "--sock-path", getApplicationInfo.dataDir + "/sock_path",
